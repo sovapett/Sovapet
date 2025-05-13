@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SovaPet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d0d;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .sova {
+            margin-top: 30px;
+            max-width: 60%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #27ae60;
+        }
+        #reaction {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #7bed9f;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>SovaPet</h1>
+    <img src="sova.png" alt="sova" class="sova" id="sovaImage">
+    <div class="buttons">
+        <button onclick="feed()">Кормить</button>
+        <button onclick="pet()">Погладить</button>
+        <button onclick="sleep()">Спать</button>
+    </div>
+    <div id="reaction"></div>
+    <script src="script.js"></script>
+</body>
+</html>
